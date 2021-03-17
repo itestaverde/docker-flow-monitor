@@ -30,5 +30,5 @@ COPY conf/shortcuts.yaml /etc/dfm/shortcuts.yaml
 USER root
 RUN chmod +x /bin/check.sh
 RUN chmod +x /bin/docker-flow-monitor
-USER nobody
+#USER nobody
 
