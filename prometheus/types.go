@@ -202,6 +202,8 @@ type GlobalConfig struct {
 	EvaluationInterval string `yaml:"evaluation_interval,omitempty"`
 	// The labels to add to any timeseries that this Prometheus instance scrapes.
 	ExternalLabels map[string]string `yaml:"external_labels,omitempty"`
+	// Logging all the queries to a file.
+	QueryLogFile string `yaml:"query_log_file,omitempty"
 }
 
 // Config is the top-level configuration for Prometheus's config files.
