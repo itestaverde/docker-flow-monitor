@@ -203,7 +203,7 @@ type GlobalConfig struct {
 	// The labels to add to any timeseries that this Prometheus instance scrapes.
 	ExternalLabels map[string]string `yaml:"external_labels,omitempty"`
 	// Logging all the queries to a file.
-	QueryLogFile string `yaml:"query_log_file,omitempty"
+	QueryLogFile string `yaml:"query_log_file,omitempty"`
 }
 
 // Config is the top-level configuration for Prometheus's config files.
