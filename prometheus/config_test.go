@@ -35,12 +35,14 @@ func (s *ConfigTestSuite) Test_GlobalConfig() {
 	c.InsertEnv("GLOBAL__SCRAPE_INTERVAL", "20s")
 	c.InsertEnv("GLOBAL__SCRAPE_TIMEOUT", "10s")
 	c.InsertEnv("GLOBAL__EVALUATION_INTERVAL", "15s")
+	c.InsertEnv("GLOBAL__QUERY_LOG_FILE", "/prometheus/query.log") 
 	c.InsertEnv("GLOBAL__EXTERNAL_LABELS", "akey=avalue")
 	c.InsertEnv("GLOBAL__EXTERNAL_LABELS", "bkey=bvalue")
 
 	s.Equal("20s", c.GlobalConfig.ScrapeInterval)
 	s.Equal("10s", c.GlobalConfig.ScrapeTimeout)
 	s.Equal("15s", c.GlobalConfig.EvaluationInterval)
+	s.Equal("/prometheus/query.log", c.GlobalConfig.QueryLogFile)
 	s.Equal("avalue", c.GlobalConfig.ExternalLabels["akey"])
 	s.Equal("bvalue", c.GlobalConfig.ExternalLabels["bkey"])
 }
