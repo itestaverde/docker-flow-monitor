@@ -1,4 +1,4 @@
-FROM golang:1.9.2 AS build
+FROM golang:1.13 AS build
 ADD . /src
 WORKDIR /src
 RUN go get -t github.com/stretchr/testify/suite
